@@ -30,9 +30,20 @@ main{
     width: 270px;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 form{
     border: solid white 0.3rem;
     border-radius: 2rem;
+}
+
+figcaption{
+    display:none;
 }
 
 a{
