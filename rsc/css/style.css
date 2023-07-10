@@ -1,0 +1,49 @@
+/* police pour les titres et sous titres*/
+@font-face {
+    font-family: FredokaOne-Regular; 
+    src: url("../font/FredokaOne-Regular.ttf"); 
+}
+
+/* police pour tous les textes de hello meteo*/
+@font-face {
+    font-family: Lexend; 
+    src: url("../font/Lexend-VariableFont_wght.ttf"); 
+}
+
+/* style général */
+body{
+    color:white;
+    background-color: #4F339E;
+    font-family: Lexend;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 270 px;
+}
+
+main{
+    display : flex;
+    flex-direction: column;
+    width: 270px;
+}
+
+form{
+    border: solid white 0.3rem;
+    border-radius: 2rem;
+}
+
+a{
+    color : white;
+    text-decoration: none;
+}
+
+#today {
+    display : flex;
+    flex-direction: column;
+    width: 270px;
+    border :solid white 0.3rem;
+    border-radius: 2rem;
+}

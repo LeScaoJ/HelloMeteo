@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./rsc/img/favicon.png" /> <!-- possible de faire changer le favicon en fonction de la météo du jour ? -->
+    <link rel="stylesheet" href="./rsc/css/style.css">
+    <title>Hello Meteo</title>
+</head>
+<body>
+    <header>
+        <!-- ICI peut être mettre le logo sous forme de texte avec des trait en css pour faire les rayons du logo -->
+        <a href="./index.html" target="_self">
+            <img src="./rsc/img/logo_HM_SsFond.png" alt="logo hello meteo"> 
+        </a>
+    </header>
+    <main>
+        <section id="today">
+            <div>
+                <!-- ICI l'affichage du temps du jour sous la forme d'une image qui change en focntion de l'information donnée par l'API MAJ toutes les heures -->
+                <!-- ICI l'affichage de l'heure de lever du soleil sous forme de texte, qui se mets à jours au changement de jour-->
+                <!-- ICI l'affichage de l'heure, mise à jour toutes les secondes, du texte -->
+                <!-- ICI L'affichage de l'heure de couché du soleil sous forme de texte, mise à jour au changement du jour-->
+            </div>
+            <div>
+                <p>Aujourd'hui, on fête </p>
+                <!--ICI un bloc texte pour afficher le saint principal du jour, mis à jour au changement de jour-->
+            </div>
+            <div>
+                <div>
+                    <!-- ICI une image avec l'affichage de la température par dessus, mise à jour toute les haures-->
+                </div>
+                <div>
+                    <!-- ICI affichage de la temperature minimale du jour, mise à jour une fois au changement de jour-->
+                    <!-- ICI affichage de la temperature moyenne du jour, mise à jour une fois au changement de jour-->
+                    <!-- ICI affichage de la temperature minimale du jour, mise à jour une fois au changement de jour-->
+                </div>
+            </div>
+            <div>
+                <!-- ICI la date du jour-->
+            </div>
+        </section>
+        <section id="nextDays">
+            <div>
+                <!-- ICI affichage de l'icone du temps prévisionnel pour le lendemain-->
+                <!-- ICI affichage de la température moyenne prévisionnelle le lendemain -->
+            </div>
+            <div>
+                <!-- ICI affichage de l'icone du temps prévisionnel pour le surlendemain-->
+                <!-- ICI affichage de la température moyenne prévisionnelle le surlendemain -->
+            </div>
+            <div>
+                <a href="./contact.html">contact</a>
+            </div>
+        </section>
+    </main>
+    <scrip src="./rsc/script/script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./rsc/img/favicon.png" />
+    <link rel="stylesheet" href="./rsc/css/style.css">
+    <title>Hello Meteo - contact </title>
+</head>
+<body>
+    <header>
+        <!-- ICI peut être mettre le logo sous forme de texte avec des trait en css pour faire les rayons du logo -->
+        <a href="./index.html" target="_self">
+            <img src="./rsc/img/logo_HM_SsFond.png" alt="logo hello meteo"> 
+        </a>
+    </header>
+    <main>
+        <form action="#" method="post"> 
+            <!-- le formulaire devra idéalement se présenter sous la forme d'un paragraphe avec des espaces blancs à remplir par l'utilisateur -->
+            <!-- possibilité de mettre le formulaire dans un filsdset avec la legend contact ? ou bien mettre une legende du le form directement -->
+            <div>
+                <label for="name">Hello, je suis</label>
+                <input id="name" type="text" name="name" value="name" placeholder="nom et prénom" title="Votre nom et votre prénom">
+            </div>
+            <div>
+                <label for="mail">mon adresse mail est </label>
+                <input id="mail" type="email" name="mail" value="mail" placeholder="adresse mail" title="votre mail">
+            </div>
+            <div>
+                <label for="subject">, et je vous contacte pour vous parler de </label>
+                <input id="subject" type="text" name="subject" value="subject" placeholder="sujet" title="le sujet de votre messages">
+            </div>
+            <div>
+                <input id="mss" type="text" name="mss" value="message" placeholder="message" title="le message a transmettre">
+            </div>
+            <div>
+                <input type="submit" value="Envoyer"> <!--mettre le bouton sous forme d'image cliquable-->
+                <input type="reset" value="Annuler"><!--mettre le bouton sous forme d'image cliquable-->
+            </div>
+        </form>
+    </main>
+</body>
+</html>
