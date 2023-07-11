@@ -155,11 +155,3 @@ async function newNextDay() {
     } 
 }
 
-
-// pour gérer la vérification des champs du formulaire
-
-
-
-
-
-

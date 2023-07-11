@@ -19,16 +19,17 @@
             <!-- le formulaire devra idéalement se présenter sous la forme d'un paragraphe avec des espaces blancs à remplir par l'utilisateur -->
             <!-- possibilité de mettre le formulaire dans un filsdset avec la legend contact ? ou bien mettre une legende du le form directement -->
             <div id="formp">
-               <p>Hello, je suis <span><input type="text" placeholder="nom prénom"></span>
-               , mon adresse mail est :<span><input type="text" placeholder="email"></span>
-               , et je vous contacte pour <span><input type="text" placeholder="sujet"></span></p>
+               <p>Hello, je suis <span><input type="text" id ="nom" placeholder="nom prénom"></span>
+               , mon adresse mail est :<span><input type="text" id ="mail" placeholder="email"></span>
+               , et je vous contacte pour <span><input type="text" id = "subject" placeholder="sujet"></span></p>
             </div>
-            <textarea name="mss" id="mss" cols="29" rows="10"></textarea>
+            <textarea name="mss" id="mss" cols="26" rows="10" placeholder="votre message"></textarea>
             <div id="validform">
-                <button type="submit" id ="valid" value="validation" disabled><img src="./rsc/img/valider.png" alt="bouton de validation de formulaire"></button> <!--mettre le bouton sous forme d'image cliquable-->
+                <button type="submit" id ="valid" value="validation"><img src="./rsc/img/valider.png" alt="bouton de validation de formulaire"></button> <!--mettre le bouton sous forme d'image cliquable-->
                 <button type="reset" id ="reset" value="reset"><img src="./rsc/img/refuser.png" alt="remise à zero du formulaire"></button><!--mettre le bouton sous forme d'image cliquable-->
             </div>
         </form>
     </main>
+    <script src="./rsc/script/form.js" ></script>
 </body>
 </html>
