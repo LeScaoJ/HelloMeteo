@@ -18,24 +18,15 @@
         <form action="#" method="post"> 
             <!-- le formulaire devra idéalement se présenter sous la forme d'un paragraphe avec des espaces blancs à remplir par l'utilisateur -->
             <!-- possibilité de mettre le formulaire dans un filsdset avec la legend contact ? ou bien mettre une legende du le form directement -->
-            <div>
-                <label for="name">Hello, je suis</label>
-                <input id="name" type="text" name="name" value="name" placeholder="nom et prénom" title="Votre nom et votre prénom">
+            <div id="formp">
+               <p>Hello, je suis <span><input type="text" placeholder="nom prénom"></span>
+               , mon adresse mail est :<span><input type="text" placeholder="email"></span>
+               , et je vous contacte pour <span><input type="text" placeholder="sujet"></span></p>
             </div>
-            <div>
-                <label for="mail">mon adresse mail est </label>
-                <input id="mail" type="email" name="mail" value="mail" placeholder="adresse mail" title="votre mail">
-            </div>
-            <div>
-                <label for="subject">, et je vous contacte pour vous parler de </label>
-                <input id="subject" type="text" name="subject" value="subject" placeholder="sujet" title="le sujet de votre messages">
-            </div>
-            <div>
-                <input id="mss" type="text" name="mss" value="message" placeholder="message" title="le message a transmettre">
-            </div>
-            <div>
-                <input type="submit" value="Envoyer"> <!--mettre le bouton sous forme d'image cliquable-->
-                <input type="reset" value="Annuler"><!--mettre le bouton sous forme d'image cliquable-->
+            <textarea name="mss" id="mss" cols="29" rows="10"></textarea>
+            <div id="validform">
+                <button type="submit" id ="valid" value="validation" disabled><img src="./rsc/img/valider.png" alt="bouton de validation de formulaire"></button> <!--mettre le bouton sous forme d'image cliquable-->
+                <button type="reset" id ="reset" value="reset"><img src="./rsc/img/refuser.png" alt="remise à zero du formulaire"></button><!--mettre le bouton sous forme d'image cliquable-->
             </div>
         </form>
     </main>

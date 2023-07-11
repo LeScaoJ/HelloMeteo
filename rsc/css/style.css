@@ -10,7 +10,7 @@
     src: url("../font/Lexend-VariableFont_wght.ttf"); 
 }
 
-/* style général */
+/* style général des balises */
 body{
     color:white;
     background-color: #4F339E;
@@ -51,6 +51,8 @@ a{
     text-decoration: none;
 }
 
+/* par ID */
+
 #today {
     display : flex;
     flex-direction: column;
@@ -58,3 +60,50 @@ a{
     border :solid white 0.3rem;
     border-radius: 2rem;
 }
+
+#formp p span input, #formp p span textarea {
+    border:none;
+    border-bottom : 2px solid white;
+    padding : 5 px;
+    outline : none;
+    background-color: #4F339E;
+}
+
+#mss {
+    margin:5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    max-width: 260 px;
+    outline: none;
+    border-radius: 10px;
+}
+
+#validform{
+    display : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    padding : 10px;
+}
+
+#validform button {
+    width: 50px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    background: none;
+    outline: none;
+    border:none;
+}
+
+#validform button img{
+    border-radius: 30px;
+}
+
+/* pseudo-classe*/
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+

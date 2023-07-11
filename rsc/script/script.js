@@ -49,15 +49,16 @@ function fetchSaint() {
         });
 }
 
+
 // données recupérées en json pour la méteo de l'API de https://www.prevision-meteo.ch/services/json/toulouse
-//on recupère les données du site
+// on recupère les données du site
 async function fetchJsonWeatherData(uri) {
     const resp = await fetch(uri); // Mets le script en attente de la data
     let data; // On prépare la variable à utiliser
     if (resp.ok) data = await resp.json(); // Mets le script en attente du "décryptage" de la data
     else throw new Error("données non collectées"); // Gestion des erreurs
     return data; // On retourne la donnée "pure"
-}        
+} 
 // on mets à jour les fonctions pour l'affichage de l'icone du temps et de la temperature à jour toutes les heures
 const weatherInterval = setInterval(majIcoTemp, 3600000);
 newIco(); // affichage de l'icone du tempsqu'il fait
@@ -65,12 +66,11 @@ newTemp(); // affichage de la température
 newSun(); // affichage du levé et du couché du soleil
 newTown(); // affichage de la ville
 newMinMoyMax(); // affichage minimale, moyenne et maximale du jour
-newNextDay();
+newNextDay(); // affichage des prévisions pour les 3 jours suivants
 function majIcoTemp() {
 newIco();
 newTemp();
 };
-
 async function newIco() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
@@ -154,5 +154,12 @@ async function newNextDay() {
         console.error(err);
     } 
 }
+
+
+// pour gérer la vérification des champs du formulaire
+
+
+
+
 
 
