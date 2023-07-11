@@ -159,9 +159,9 @@ async function newMinMoyMax() {
         const minMoyMax = document.getElementById("minMoyMax");
         let tmoy = (data.fcst_day_0.tmin + data.fcst_day_0.tmax)/2;
         minMoyMax.innerHTML = `
-            <p>${data.fcst_day_0.tmin}°</p>
-            <p>${tmoy}°</p>
-            <p>${data.fcst_day_0.tmax}°</p>
+            <p> min. ${data.fcst_day_0.tmin}°</p>
+            <p> moy. ${tmoy}°</p>
+            <p> max. ${data.fcst_day_0.tmax}°</p>
         `;
     } catch (err) { 
         console.error(err);

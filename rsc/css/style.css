@@ -87,7 +87,7 @@ textarea {
     border :solid white 0.3rem;
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 0.5rem;
+    padding: 0.8rem;
 }
 
 #formp p span input, #formp p span textarea {
@@ -184,6 +184,40 @@ textarea {
     color:#B67DFF;
 }
 
+#theSaint {
+    font-size: 1rem;
+    margin: 0.7rem;
+    padding: 0.5rem;
+    border-top : solid #8f45cc 0.2rem;
+    border-bottom: solid #8f45cc 0.2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#theSaint p{
+    margin:0;
+}
+#saint{
+    font-size:1.5rem;
+    font-family: FredokaOne;
+}
+
+#theTemp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#minMoyMax{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#minMoyMax p{
+   margin:0;
+   font-size: 0.9rem;
+}
+
 
 #nextDays {
     display : flex;
@@ -245,7 +279,8 @@ textarea {
     background-color:#8f45cc;
     font-weight: bolder;
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
+    margin-right: 0.8rem;
     border-radius: 0.6rem;
 }
 
