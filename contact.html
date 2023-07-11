@@ -19,16 +19,20 @@
             <!-- le formulaire devra idéalement se présenter sous la forme d'un paragraphe avec des espaces blancs à remplir par l'utilisateur -->
             <!-- possibilité de mettre le formulaire dans un filsdset avec la legend contact ? ou bien mettre une legende du le form directement -->
             <div id="formp">
-               <p>Hello, je suis <span><input type="text" id ="nom" placeholder="nom prénom"></span>
-               , mon adresse mail est :<span><input type="text" id ="mail" placeholder="email"></span>
-               , et je vous contacte pour <span><input type="text" id = "subject" placeholder="sujet"></span></p>
-            </div>
-            <textarea name="mss" id="mss" cols="26" rows="10" placeholder="votre message"></textarea>
+               <p>Hello, je m'appelle <span><input type="text" id ="firstName" class = "nameColor" placeholder="nom prénom"></span>
+               mon adresse mail est :<span><input type="text" id ="mail" class="mailColor" placeholder="email"></span>
+               et je vous contacte pour <span><input type="text" id = "subject" class ="subjectColor" placeholder="sujet"></span></p>
+            </div>  
+            <textarea name="mss" id="mss" class ="mssColor" cols="23" rows="10" placeholder="votre message"></textarea>
             <div id="validform">
                 <button type="submit" id ="valid" value="validation"><img src="./rsc/img/valider.png" alt="bouton de validation de formulaire"></button> <!--mettre le bouton sous forme d'image cliquable-->
                 <button type="reset" id ="reset" value="reset"><img src="./rsc/img/refuser.png" alt="remise à zero du formulaire"></button><!--mettre le bouton sous forme d'image cliquable-->
             </div>
         </form>
+        <div class ="aide nameColor" id ="pbfirstName">* Vous n'avez pas renseigné votre nom et prénom.</div>
+        <div class ="aide mailColor" id ="pbMail">* Le texte saisi n'est pas une adresse mail</div>
+        <div class ="aide subjectColor" id ="pbSubject">* Vous n'avez pas renseigné le sujet de votre message.</div>
+        <div class ="aide mssColor" id ="pbMss">* Vous n'avez pas écris de message.</div>
     </main>
     <script src="./rsc/script/form.js" ></script>
 </body>

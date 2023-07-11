@@ -41,6 +41,7 @@ form{
     border: solid white 0.3rem;
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 0 12px 0 12px;
 }
 
 figcaption{
@@ -51,6 +52,17 @@ a{
     color : white;
     text-decoration: none;
 }
+input {
+    color : #FBFF3C;
+    font-family: Lexend;
+    font-size: 12pt;
+}
+
+textarea {
+    resize: none;
+    font-family: Lexend;
+    font-size: 12pt;
+  }
 
 /* par ID */
 
@@ -70,9 +82,17 @@ a{
     outline : none;
     background-color: #4F339E;
 }
+#formp {
+    display : flex;
+    flex-direction:column;
+    align-items: center;
+}
+#formp p{
+    text-align: center;
+    font-size :14pt;
+}
 
 #mss {
-    margin:17px;
     border: none;
     background-color: rgba(255, 255, 255, 0.4);
     max-width: 260 px;
@@ -93,12 +113,46 @@ a{
     flex-direction:row;
     justify-content: center;
     background: none;
+    border-radius: 50px;
     outline: none;
     border:none;
 }
 
+
+#valid:hover {
+    background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
+}
+#reset:hover {
+    background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
+}
+#reset:active {
+    background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #f0ae20 104.54%);
+}
+
 #validform button img{
     border-radius: 30px;
+}
+
+
+/* classes */
+
+.aide {
+    display: none;
+}
+.show {
+    display: inline-block;
+}
+.nameColor {
+    color:#f7f479;
+}
+.mailColor {
+    color:#FBFF3C;
+}
+.subjectColor {
+    color:#f0ae20;
+}
+.mssColor {
+    color:#370E60;;
 }
 
 /* pseudo-classe*/
@@ -106,6 +160,5 @@ a{
 ::placeholder{
     color: rgba(255, 255, 255, 0.6);
 }
-
 
 
