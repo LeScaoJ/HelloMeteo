@@ -3,6 +3,10 @@
 const dateInterval = setInterval(majDateHeure, 1000); 
 newDate(); // premier affichage
 newHour(); // premier affichage
+
+/**
+ * cette fonction permets de recupérer la date du jour et de l'afficher dans une div de l'index.html
+ */
 function newDate() {
     let now = new Date();  
     let year = now.getFullYear(); // on récupère l'année
@@ -12,6 +16,10 @@ function newDate() {
     const dateDiv = document.getElementById("date"); // on recupère la div date du HTML
     dateDiv.textContent = day + "/" + month + "/" + year; // on ecrit la date directement dedans
 };
+
+/**
+ * cette fonction permets d'afficher l'heure du jour et de l'afficher dans une div de l'index.html
+ */
 function newHour() {
     // fonction identique à date mais appliquée à l'heure
     let now = new Date();
@@ -22,6 +30,10 @@ function newHour() {
     const hourDiv = document.getElementById("hour");
     hourDiv.textContent = hours + ":" + mins + ":" + secs;
 };
+
+/**
+ * cette fonction permets de réaliser les deux fonction de récupération de la date et de l'heure en même temps
+ */
 function majDateHeure() {
     newDate();
     newHour();
@@ -49,9 +61,10 @@ function fetchSaint() {
         });
 }
 
-
-// données recupérées en json pour la méteo de l'API de https://www.prevision-meteo.ch/services/json/toulouse
-// on recupère les données du site
+/**
+ * Une fonction permettant d'attribuer à une variable, les informations json renvoyées par l'API
+ * @param {uri} uri l'adresse de l'api
+ */
 async function fetchJsonWeatherData(uri) {
     const resp = await fetch(uri); // Mets le script en attente de la data
     let data; // On prépare la variable à utiliser
@@ -67,10 +80,18 @@ newSun(); // affichage du levé et du couché du soleil
 newTown(); // affichage de la ville
 newMinMoyMax(); // affichage minimale, moyenne et maximale du jour
 newNextDay(); // affichage des prévisions pour les 3 jours suivants
+
+/**
+ * la fonction permets de mettre à jour en même temps, l'icone du temps actuel et la température
+ */
 function majIcoTemp() {
 newIco();
 newTemp();
 };
+
+/**
+ * la fonction permet de récupérer via la fonction de récupération des données de l'API (data), l'icone correspondant au temps actuel
+ */
 async function newIco() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
@@ -81,6 +102,10 @@ async function newIco() {
         console.error(err);
     }
 };
+
+/**
+ * la fonction permet de récupérer via la fonction de récupération des données de l'API (data), la temperature actuelle
+ */
 async function newTemp() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
@@ -91,19 +116,27 @@ async function newTemp() {
         console.error(err);
     }
 };
+
+/**
+ * la fonction permet de récupérer via la fonction de récupération des données de l'API (data), l'heure de levé et l'heure de couché du soleil
+ */
 async function newSun() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
         const data = await fetchJsonWeatherData(uri);
         const sunrise = document.getElementById("sunrise");
         const sunset = document.getElementById("sunset");
-        sunrise.textContent = data.city_info.sunrise;
-        sunset.textContent = data.city_info.sunset;
+        sunrise.textContent = `levé : ${data.city_info.sunrise}`;
+        sunset.textContent = `couché : ${data.city_info.sunset}`;
 
     } catch (err) { 
         console.error(err);
     }
 };
+
+/**
+ * la fonction permet de récupérer via la fonction de récupération des données de l'API (data), le nom de la ville
+ */
 async function newTown() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
@@ -115,6 +148,10 @@ async function newTown() {
         console.error(err);
     }
 };
+
+/**
+ * la fonction permet de récupérer via la fonction de récupération des données de l'API (data), la température minimale, la maximale et permets de faire la moyenne des deux
+ */
 async function newMinMoyMax() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
@@ -122,33 +159,42 @@ async function newMinMoyMax() {
         const minMoyMax = document.getElementById("minMoyMax");
         let tmoy = (data.fcst_day_0.tmin + data.fcst_day_0.tmax)/2;
         minMoyMax.innerHTML = `
-            <p>${data.fcst_day_0.tmin}</p>
-            <p>${tmoy}</p>
-            <p>${data.fcst_day_0.tmax}</p>
+            <p>${data.fcst_day_0.tmin}°</p>
+            <p>${tmoy}°</p>
+            <p>${data.fcst_day_0.tmax}°</p>
         `;
     } catch (err) { 
         console.error(err);
     }
 };
+
+/**
+ * la fonction permet de récupérer via la fonction de récupération des données de l'API (data), l'icone définissant le temps et calculer la temperature moyenne pour les 4 jours suivant le jour actuel 
+ */
 async function newNextDay() {
     const uri = `https://www.prevision-meteo.ch/services/json/toulouse`;
     try { 
         const data = await fetchJsonWeatherData(uri);
         const nextDay = document.getElementById("nextDays");
-        for (let i= 2; i<=4; i++) {
+        for (let i= 1; i<=4; i++) {
             const previsionsJour = data['fcst_day_' + i]; // on recupère les données du jour selectionné en fonction de i
 
+            const fieldset = document.createElement("fieldset");
+            const legend = document.createElement("legend");
             const day = document.createElement("div");
             const icoDay = document.createElement("img");
             const p = document.createElement("p");
             const moyTemp = (previsionsJour.tmin + previsionsJour.tmax)/2;
 
             icoDay.src = previsionsJour.icon;
-            p.textContent = moyTemp;
+            p.textContent = `${moyTemp}°`;
+            legend.textContent=previsionsJour.day_short;
 
             day.appendChild(icoDay);
             day.appendChild(p);
-            nextDay.appendChild(day);
+            fieldset.appendChild(legend);
+            fieldset.appendChild(day);
+            nextDay.appendChild(fieldset);
         }        
     } catch (err) { 
         console.error(err);

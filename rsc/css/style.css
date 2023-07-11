@@ -1,6 +1,6 @@
 /* police pour les titres et sous titres*/
 @font-face {
-    font-family: FredokaOne-Regular; 
+    font-family: FredokaOne; 
     src: url("../font/FredokaOne-Regular.ttf"); 
 }
 
@@ -16,18 +16,26 @@ body{
     background-color: #4F339E;
     font-family: Lexend;
     display: flex;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     align-items: center;
 }
 
 header{
-    width: 270 px;
+    width: 100%;
+    text-align: center;
 }
 
 main{
     display : flex;
     flex-direction: column;
-    width: 270px;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
 }
 
 section {
@@ -42,6 +50,13 @@ form{
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 0 12px 0 12px;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin : 5px 0 0 0;
 }
 
 figcaption{
@@ -69,10 +84,10 @@ textarea {
 #today {
     display : flex;
     flex-direction: column;
-    width: 270px;
     border :solid white 0.3rem;
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
 }
 
 #formp p span input, #formp p span textarea {
@@ -118,21 +133,121 @@ textarea {
     border:none;
 }
 
-
 #valid:hover {
     background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
 }
 #reset:hover {
     background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
 }
-#reset:active {
-    background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #f0ae20 104.54%);
-}
 
 #validform button img{
     border-radius: 30px;
 }
 
+#weather{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#weather img{
+    width: 60px;
+    height: 60px;
+    margin:0.5rem;
+}
+
+#date{
+    background-color: #370E60;
+    padding: 0.6rem;
+    border-radius: 0.8rem;
+}
+
+#hour {
+    font-size: 2rem;
+}
+
+#weather div{
+    margin:0.2rem;
+}
+
+#town{
+    font-size:x-large;
+    font-family: FredokaOne;
+}
+
+#sunrise{
+    color:#B67DFF;
+}
+#sunset{
+    color:#B67DFF;
+}
+
+
+#nextDays {
+    display : flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color : #AE74E8;
+}
+#nextDays fieldset {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border : solid #AE74E8 0.2rem;
+    border-radius: 0.7rem;
+    width:40%;
+    margin: 5px;
+    padding: 0;
+}
+#nextDays div {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 115px;
+    font-size: 1.2rem;
+}
+#nextDays img {
+    width: 40px;
+    height: 40px;
+    margin : 5px 0 10px 0;
+}
+#nextDays p {
+    background-color: #8f45cc;
+    border-radius: 0.5rem;
+    margin : 5px 0 5px 0;
+    padding: 5px;
+    color :white;
+    font-weight: bold;
+}
+#contact {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #370E60;
+    color:#AE74E8;
+    height: 30px;
+    text-align: center; 
+    border :solid 0.2rem #AE74E8;
+    border-radius: 0.7rem;
+    width: 95%;  
+    align-self : center; 
+}
+#contact:hover {
+    background-color: #AE74E8;
+    color: #370E60;
+    border :solid 0.2rem #370E60;
+}
+#currentTemp {
+    background-color:#8f45cc;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+}
 
 /* classes */
 

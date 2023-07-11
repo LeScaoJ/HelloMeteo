@@ -17,11 +17,13 @@
     <main>
         <section id="today">
             <div id="weather">
-                <div id="town"><!-- ICI nom de la ville--></div>
-                <img id="ico"><!-- ICI l'affichage du temps du jour sous la forme d'une image qui change en focntion de l'information donnée par l'API MAJ toutes les heures --></div>
-                <div id="sunrise"><!-- ICI l'affichage de l'heure de lever du soleil sous forme de texte, qui se mets à jours au changement de jour--></div>
-                <div id="hour"><!-- ICI l'affichage de l'heure, mise à jour toutes les secondes, du texte --></div>
-                <div id="sunset"> <!-- ICI L'affichage de l'heure de couché du soleil sous forme de texte, mise à jour au changement du jour--></div>
+                <div id="town"><!-- ICI nom de la ville--></div><div id="date"><!-- ICI la date du jour--></div>
+                <img id="ico"><!-- ICI l'affichage du temps du jour sous la forme d'une image qui change en focntion de l'information donnée par l'API MAJ toutes les heures -->
+                <div>
+                    <div id="sunrise"><!-- ICI l'affichage de l'heure de lever du soleil sous forme de texte, qui se mets à jours au changement de jour--></div>
+                    <div id="hour"><!-- ICI l'affichage de l'heure, mise à jour toutes les secondes, du texte --></div>
+                    <div id="sunset"> <!-- ICI L'affichage de l'heure de couché du soleil sous forme de texte, mise à jour au changement du jour--></div>
+                </div>
             </div>
             <div>
                 <p>Aujourd'hui, on fête </p>
@@ -37,15 +39,15 @@
                     <!-- ICI affichage de la temperature minimale du jour, mise à jour une fois au changement de jour-->
                 </div>
             </div>
-            <div id="date"><!-- ICI la date du jour--></div>
+           
         </section>
         <section id="nextDays">
             <!-- ICI l'affichage du temps des trois jours suivants et de la température moyenne -->
-            <div>
-                <a href="./contact.html">contact</a>
-            </div>
         </section>
     </main>
+    <footer> <div>
+        <a href="./contact.html" id="contact">contact</a>
+    </div></footer>
     <script src="./rsc/script/script.js" ></script>
 </body>
 </html>
