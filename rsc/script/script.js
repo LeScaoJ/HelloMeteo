@@ -41,25 +41,25 @@ function majDateHeure() {
 
 
 // données recupérées en json pour les saints de l'API de nominis
-fetchSaint(); // on affiche le saint du jour
-function fetchSaint() {
-    const uri = `https://nominis.cef.fr/json/saintdujour.php`;
-    fetch(uri) 
-        .then((resp) => {
-            if (resp.ok) { 
-                return resp.json();
-            } else {
-                throw new Error(`Les données n'ont pu être collectées. ${resp.status} : ${resp.statusText}`);
-            }
-        })
-        .then((data) => {
-            const saint = document.getElementById("saint");
-            saint.textContent = data.response.saintdujour.nom;
-        })
-        .catch((err) => {
-            throw new Error(`Un problème réseau est survenu (${err}).`);
-        });
-}
+// fetchSaint(); // on affiche le saint du jour
+// function fetchSaint() {
+//     const uri = `https://nominis.cef.fr/json/saintdujour.php`;
+//     fetch(uri) 
+//         .then((resp) => {
+//             if (resp.ok) { 
+//                 return resp.json();
+//             } else {
+//                 throw new Error(`Les données n'ont pu être collectées. ${resp.status} : ${resp.statusText}`);
+//             }
+//         })
+//         .then((data) => {
+//             const saint = document.getElementById("saint");
+//             saint.textContent = data.response.saintdujour.nom;
+//         })
+//         .catch((err) => {
+//             throw new Error(`Un problème réseau est survenu (${err}).`);
+//         });
+// }
 
 /**
  * Une fonction permettant d'attribuer à une variable, les informations json renvoyées par l'API
