@@ -11,7 +11,7 @@ function newDate() {
     let now = new Date();  
     let year = now.getFullYear(); // on récupère l'année
     let month = (`0`+ (now.getMonth()+1)).slice(-2); // on récupère le mois de 0 a 11, on ajoute +1 pour avoir de 1 à 12, on affiche la date sur 2 chiffres en rajoutant un 0 pour avoir le format 00/00
-    let day = ('0'+(now.getDate()+1)).slice(-2); // on récupère le jour
+    let day = ('0'+now.getDate()).slice(-2); // on récupère le jour
     
     const dateDiv = document.getElementById("date"); // on recupère la div date du HTML
     dateDiv.textContent = day + "/" + month + "/" + year; // on ecrit la date directement dedans
