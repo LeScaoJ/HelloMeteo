@@ -211,6 +211,12 @@ textarea {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 5%;
+    padding: 5%;
+    border-top : solid #8f45cc 0.2rem;
+    border-top-left-radius: 1rem;
+    border-bottom: solid #8f45cc 0.2rem;
+    border-bottom-right-radius: 1rem;
 }
 #minMoyMax{
     display: flex;
